@@ -56,7 +56,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     var name = document.getElementById("name");
 
-    $( "#name" ).html(displayName.split(' ')[1]);
+    $( "#name" ).html(displayName.split(' ')[0]);
 
     var feelings = document.getElementById('feelings');
     var emojis = feelings.querySelectorAll('a');
