@@ -51,13 +51,13 @@ firebase.auth().onAuthStateChanged(function(user) {
     var displayName = user.displayName;
     var email = user.email;
     var emailVerified = user.emailVerified;
-    var photoURL = user.photoURL;
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
-    var providerData = user.providerData;
 
     var name = document.getElementById("name");
-  name.innerHTML = displayName.split(' ').slice(0, -1).join(' ');
+
+    $( "#name" ).html(displayName.split(' ').slice(0, -1).join(' '));
+
     var feelings = document.getElementById('feelings');
     var emojis = feelings.querySelectorAll('a');
 
