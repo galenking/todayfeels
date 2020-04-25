@@ -58,11 +58,9 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     $( "#name" ).html(displayName.split(' ')[0]);
 
-    var feelings = document.getElementById('feelings');
-    var emojis = feelings.querySelectorAll('a');
-
-    emojis.forEach(item => {
-      item.addEventListener('click', addFeeling(item));
+    $('.feelings a').click(function(item) {
+         addFeeling(item);
+         item.preventDefault();
     });
 
     var uid = firebase.auth().currentUser.uid;
